@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <scenes>
-        <!--Login View Controller-->
+        <!--LogInScreen-->
         <scene sceneID="RYF-bz-vgZ">
             <objects>
-                <viewController id="YFA-vH-6pW" customClass="LoginViewController" sceneMemberID="viewController">
+                <viewController title="LogInScreen" id="YFA-vH-6pW" customClass="LoginViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="brO-sU-4v0"/>
                         <viewControllerLayoutGuide type="bottom" id="mPr-X6-PiZ"/>
@@ -127,10 +127,10 @@
             </objects>
             <point key="canvasLocation" x="768" y="1281"/>
         </scene>
-        <!--View Controller-->
+        <!--MainScreen-->
         <scene sceneID="nlT-dT-I8M">
             <objects>
-                <viewController id="sJb-Vi-5Ta" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainScreen" title="MainScreen" id="sJb-Vi-5Ta" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bJR-9Q-zvQ"/>
                         <viewControllerLayoutGuide type="bottom" id="f04-PE-ji4"/>

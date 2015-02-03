@@ -1,3 +1,4 @@
+
 //
 //  LoginViewController.m
 //  SignInWithParse
@@ -19,11 +20,27 @@
     [super viewDidLoad];
     
 }
+
+-(void)viewDidAppear:(BOOL)animated{
+    UIViewController *vc = [[UIStoryboard storyboardWithName:@"Main" bundle:nil]instantiateViewControllerWithIdentifier:@"MainScreen"];
+    
+    PFUser *currentUser = [PFUser currentUser];
+    if (currentUser) {
+        // go straight to the app!
+        [self presentViewController:vc animated:NO completion:^{
+            
+        }];
+
+    }
+
+}
 - (IBAction)logInPressed:(id)sender {
+    
     
     [PFUser logInWithUsernameInBackground:self.userTextField.text password:self.passwordTextField.text block:^(PFUser *user, NSError *error) {
         if (user) {
-           
+            
+            //[[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"isLoggedIn"];
             [self performSegueWithIdentifier:@"LoginSuccessful" sender:self];
             
         } else {

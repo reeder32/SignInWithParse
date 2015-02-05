@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="YFA-vH-6pW">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="9NK-rr-4ri">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
@@ -7,7 +7,7 @@
         <!--LogInScreen-->
         <scene sceneID="RYF-bz-vgZ">
             <objects>
-                <viewController title="LogInScreen" id="YFA-vH-6pW" customClass="LoginViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LogInScreen" title="LogInScreen" id="YFA-vH-6pW" customClass="LoginViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="brO-sU-4v0"/>
                         <viewControllerLayoutGuide type="bottom" id="mPr-X6-PiZ"/>
@@ -113,11 +113,17 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hP4-GG-H0O">
+                                <rect key="frame" x="112" y="269" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="emailTextField" destination="hP4-GG-H0O" id="IZf-zT-UtP"/>
                         <outlet property="passwordRegisterTextField" destination="jlW-Yz-WnL" id="ybh-fB-Vdw"/>
                         <outlet property="userRegisterTextField" destination="6T4-Yb-XBS" id="3YR-BQ-W7g"/>
                         <segue destination="sJb-Vi-5Ta" kind="show" identifier="SignupSuccesful" id="B9K-A0-iAS"/>
@@ -125,12 +131,68 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="768" y="1281"/>
+            <point key="canvasLocation" x="494" y="1292"/>
+        </scene>
+        <!--ProfilePage-->
+        <scene sceneID="RrN-BG-5D0">
+            <objects>
+                <viewController title="ProfilePage" id="9NK-rr-4ri" customClass="ProfilePageViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="QtN-12-IiA"/>
+                        <viewControllerLayoutGuide type="bottom" id="McG-uM-05i"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="d5O-hW-AQz">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username from signup" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JBb-lf-h2w">
+                                <rect key="frame" x="16" y="42" width="288" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K4N-N2-VM3">
+                                <rect key="frame" x="0.0" y="120" width="320" height="110"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="9NK-rr-4ri" id="k2w-gX-NT6"/>
+                                    <outlet property="delegate" destination="9NK-rr-4ri" id="FeT-Xa-Xwc"/>
+                                </connections>
+                            </pickerView>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dth-7a-6vj">
+                                <rect key="frame" x="0.0" y="289" width="320" height="110"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="9NK-rr-4ri" id="eEr-p1-hwJ"/>
+                                    <outlet property="delegate" destination="9NK-rr-4ri" id="JhA-Wm-G7J"/>
+                                </connections>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="How often do you play?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nzk-BR-9K1">
+                                <rect key="frame" x="60" y="91" width="221" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Playing Experience" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y3a-Mf-ysw">
+                                <rect key="frame" x="66" y="260" width="215" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="experiencePicker" destination="dth-7a-6vj" id="ZI0-2D-B87"/>
+                        <outlet property="oftenPlayPicker" destination="K4N-N2-VM3" id="8QL-Ld-L6j"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HTO-U8-ErQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1576" y="1246"/>
         </scene>
         <!--MainScreen-->
         <scene sceneID="nlT-dT-I8M">
             <objects>
-                <viewController storyboardIdentifier="MainScreen" title="MainScreen" id="sJb-Vi-5Ta" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainScreen" title="MainScreen" id="sJb-Vi-5Ta" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bJR-9Q-zvQ"/>
                         <viewControllerLayoutGuide type="bottom" id="f04-PE-ji4"/>
@@ -145,6 +207,15 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TSQ-uX-Iix">
+                                <rect key="frame" x="123" y="325" width="85" height="30"/>
+                                <state key="normal" title="Sign Out">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="signOut:" destination="sJb-Vi-5Ta" eventType="touchUpInside" id="J5a-mB-zNc"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>

@@ -15,6 +15,17 @@
 
 @implementation ViewController
 
+- (IBAction)signOut:(id)sender {
+    
+
+    [PFUser logOut];
+    
+    
+    UIViewController *viewcontroller = [[UIStoryboard storyboardWithName:@"Main" bundle:nil]instantiateViewControllerWithIdentifier:@"LogInScreen"];
+    [self presentViewController:viewcontroller animated:YES completion:^{
+        
+    }];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

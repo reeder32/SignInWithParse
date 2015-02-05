@@ -12,6 +12,6 @@
 
 @property (weak, nonatomic) IBOutlet UITextField *userRegisterTextField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordRegisterTextField;
-@property (weak, nonatomic) IBOutlet UITextField *confirmPassword;
+@property (weak, nonatomic) IBOutlet UITextField *emailTextField;
 
 @end

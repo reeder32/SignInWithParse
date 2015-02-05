@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		27694F611A82C44B0012D556 /* ProfilePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27694F601A82C44B0012D556 /* ProfilePageViewController.m */; };
 		276A2DDC1A7B738300BD7600 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 276A2DDB1A7B738300BD7600 /* Bolts.framework */; };
 		276A2DE01A7B73D700BD7600 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 276A2DDF1A7B73D700BD7600 /* AudioToolbox.framework */; };
 		276A2DE21A7B73DF00BD7600 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 276A2DE11A7B73DF00BD7600 /* CFNetwork.framework */; };
@@ -42,6 +43,8 @@
 
 /* Begin PBXFileReference section */
 		2767C2E91A802ADF002110BD /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		27694F5F1A82C44A0012D556 /* ProfilePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfilePageViewController.h; sourceTree = "<group>"; };
+		27694F601A82C44B0012D556 /* ProfilePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfilePageViewController.m; sourceTree = "<group>"; };
 		276A2DDB1A7B738300BD7600 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		276A2DDF1A7B73D700BD7600 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		276A2DE11A7B73DF00BD7600 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -125,6 +128,8 @@
 		2797909C1A7B6BA5005A4652 = {
 			isa = PBXGroup;
 			children = (
+				27694F5F1A82C44A0012D556 /* ProfilePageViewController.h */,
+				27694F601A82C44B0012D556 /* ProfilePageViewController.m */,
 				2767C2E91A802ADF002110BD /* PrefixHeader.pch */,
 				276A2DF91A7BEFDD00BD7600 /* RegisterViewController.h */,
 				276A2DFA1A7BEFDD00BD7600 /* RegisterViewController.m */,
@@ -290,6 +295,7 @@
 				276A2DFB1A7BEFDD00BD7600 /* RegisterViewController.m in Sources */,
 				276A2DF81A7BEFCA00BD7600 /* LoginViewController.m in Sources */,
 				279790B11A7B6BA6005A4652 /* ViewController.m in Sources */,
+				27694F611A82C44B0012D556 /* ProfilePageViewController.m in Sources */,
 				279790AE1A7B6BA6005A4652 /* AppDelegate.m in Sources */,
 				279790AB1A7B6BA6005A4652 /* main.m in Sources */,
 			);

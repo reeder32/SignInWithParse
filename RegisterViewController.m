@@ -21,10 +21,11 @@
     
 }
 - (IBAction)signUpButtonPressed:(id)sender {
-    if (self.passwordRegisterTextField.text.length > 0 && self.userRegisterTextField.text.length > 0) {
+    if (self.passwordRegisterTextField.text.length > 0 && self.userRegisterTextField.text.length > 0 && self.emailTextField.text.length > 0) {
         PFUser *user = [PFUser user];
         user.username = self.userRegisterTextField.text;
         user.password = self.passwordRegisterTextField.text;
+        user.email = self.emailTextField.text;
         [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
             if (!error) {
                 [self performSegueWithIdentifier:@"SignupSuccesful" sender:self];
@@ -38,6 +39,10 @@
         [self presentViewController:alert animated:YES completion:nil];
     }
 
+}
+
+-(void)validateEmail{
+    
 }
 
 - (void)didReceiveMemoryWarning {
